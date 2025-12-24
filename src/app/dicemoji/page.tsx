@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function DicemojiGenerator() {
   const [seed, setSeed] = useState("");
 
-  const avatarUrl = `https://api.dicebear.com/7.x/fun-emoji/svg?seed=${seed}`;
+  const avatarUrl = `https://api.dicebear.com/9.x/fun-emoji/svg?seed=${seed}`;
 
   return (
     <main className="min-h-screen w-full flex items-center justify-center px-4">
@@ -28,7 +28,6 @@ export default function DicemojiGenerator() {
           Dicemoji Creator
         </h1>
 
-        {/* Avatar Preview */}
         <Link
           href={seed ? `/avatar/${seed}` : "#"}
           className="flex justify-center mt-4"
@@ -43,7 +42,6 @@ export default function DicemojiGenerator() {
           />
         </Link>
 
-        {/* Input Generator */}
         <input
           type="text"
           placeholder="Masukkan nama / seed"

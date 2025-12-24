@@ -14,7 +14,6 @@ export default function Navbar() {
     <header className="w-full border-b border-gray-300 bg-white fixed top-0 left-0">
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
           <Logo />
 
           {/* Desktop Menu */}

@@ -20,7 +20,7 @@ export default function GalleryPage() {
         {seeds.map((seed) => (
           <Link key={seed} href={`/avatar/${seed}`}>
             <Image
-              src={`https://api.dicebear.com/7.x/fun-emoji/svg?seed=${seed}`}
+              src={`https://api.dicebear.com/9.x/fun-emoji/svg?seed=${seed}`}
               alt={`Dicemoji ${seed}`}
               width={96}
               height={96}

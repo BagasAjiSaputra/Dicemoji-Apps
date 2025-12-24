@@ -8,12 +8,11 @@ function generateSeed() {
 
 export default function Home() {
   const seed = generateSeed();
-  const avatarUrl = `https://api.dicebear.com/7.x/fun-emoji/svg?seed=${seed}`;
+  const avatarUrl = `https://api.dicebear.com/9.x/fun-emoji/svg?seed=${seed}`;
 
   return (
     <main className="min-h-screen flex items-center justify-center px-4 bg-gray-50">
       <section className="w-full max-w-md text-center">
-        {/* Avatar Preview */}
         <div className="flex justify-center mb-6">
           <Image
             src={avatarUrl}
@@ -25,7 +24,6 @@ export default function Home() {
           />
         </div>
 
-        {/* Title */}
         <h1 className="text-2xl font-semibold mb-2">
           Dicemoji Generator
         </h1>
@@ -34,7 +32,6 @@ export default function Home() {
           Buat avatar emoji unik hanya dengan satu klik.
         </p>
 
-        {/* CTA */}
         <Link
           href="/dicemoji"
           className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-black text-white text-sm hover:bg-gray-800 transition"

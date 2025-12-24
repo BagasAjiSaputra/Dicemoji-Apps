@@ -8,7 +8,7 @@ export async function GET(
 ) {
   const { seed } = await params;
 
-  const dicebearUrl = `https://api.dicebear.com/7.x/fun-emoji/svg?seed=${seed}`;
+  const dicebearUrl = `https://api.dicebear.com/9.x/fun-emoji/svg?seed=${seed}`;
   const response = await fetch(dicebearUrl);
 
   const svg = await response.text();

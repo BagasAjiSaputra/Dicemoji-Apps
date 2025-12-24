@@ -1,4 +1,5 @@
 import Image from "next/image";
+import DownloadButton from "@/components/atoms/Download";
 
 type AvatarDetailProps = {
   params: Promise<{
@@ -17,7 +18,7 @@ export default async function AvatarDetailPage({
         <h1 className="text-xl font-semibold">Detail Avatar</h1>
 
         <Image
-          src={`https://api.dicebear.com/7.x/fun-emoji/svg?seed=${seed}`}
+          src={`https://api.dicebear.com/9.x/fun-emoji/svg?seed=${seed}`}
           alt={`Avatar ${seed}`}
           width={200}
           height={200}
@@ -29,13 +30,7 @@ export default async function AvatarDetailPage({
           Seed: <span className="font-mono">{seed}</span>
         </p>
 
-        <a
-  href={`/api/avatar/${seed}`}
-  className="inline-block text-sm px-4 py-2 rounded-lg bg-black text-white hover:bg-gray-800"
->
-  Download Avatar
-</a>
-
+        <DownloadButton seed={seed} />
       </section>
     </main>
   );
